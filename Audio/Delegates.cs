@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using System.IO;
 namespace RKitchen.Audio
 {
+    using SourceMap = Dictionary<string, AudioSource>;
+    using SinkMap = Dictionary<string, AudioSink>;
+    using FromAudioMap = Dictionary<string, FromAudioStream>;
+    using ToAudioMap = Dictionary<string, ToAudioStream>;
+
     public delegate Stream AudioSource(IAudioDevice device);
     public delegate void AudioSink(Stream data, IAudioDevice device);
     public delegate Track FromAudioStream(Stream source);
@@ -10,9 +15,9 @@ namespace RKitchen.Audio
 
     public static class DelegateStruct
     {
-        public static IDictionary<string, AudioSource> Sources { get; } =
-            new Dictionary<string, AudioSource>();
-        public static IDictionary<string, AudioSink> Sinks { get; } =
-            new Dictionary<string, AudioSink>();
+        public static SourceMap Sources { get; } = new SourceMap();
+        public static SinkMap Sinks { get; } = new SinkMap();
+        public static FromAudioMap StreamFro { get; } = new FromAudioMap();
+        public static ToAudioMap StreamTo { get; } = new ToAudioMap();
     }
 }
