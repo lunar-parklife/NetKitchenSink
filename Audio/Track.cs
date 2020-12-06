@@ -11,7 +11,7 @@ namespace RKitchen.Audio
             Samples = new List<Sample>();
         }
 
-        public string Name { get; }
+        public string Name { get; set; }
         public IList<Sample> Samples { get; }
     }
 }

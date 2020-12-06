@@ -1,17 +1,11 @@
 using System;
-using System.Threading;
+using System.IO;
 namespace RKitchen.Audio
 {
     public interface IAudioDevice : IDisposable
     {
         string Name { get; }
-        AudioDeviceFlags Flags { get; }
-    }
-
-    [Flags]
-    [Serializable]
-    public enum AudioDeviceFlags : byte
-    {
-        Unknown = 0x00
+        Stream Broadcast();
+        Stream Listen();
     }
 }
