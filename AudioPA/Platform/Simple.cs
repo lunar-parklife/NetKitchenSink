@@ -6,10 +6,9 @@ namespace RKitchen.Audio.PA.Platform
     {
         [DllImport("pulseaudio")]
         internal extern static IntPtr pa_simple_new(
-            [MarshalAs(UnmanagedType.AnsiBStr)] string server,
-            [MarshalAs(UnmanagedType.AnsiBStr)] string name,
-            int dir,
-            [MarshalAs(UnmanagedType.AnsiBStr)] string dev
+            [MarshalAs(UnmanagedType.BStr)] string server,
+            [MarshalAs(UnmanagedType.BStr)] string name,
+            [MarshalAs(UnmanagedType.BStr)] string dev
         );
 
         [DllImport("pulseaudio")]
@@ -18,7 +17,7 @@ namespace RKitchen.Audio.PA.Platform
         [DllImport("puseaudio")]
         internal extern static int pa_simple_write(
             IntPtr s,
-            IntPtr data,
+            [MarshalAs(UnmanagedType.LPArray)] byte[] data,
             uint bytes,
             IntPtr error
         );
