@@ -2,12 +2,13 @@ using System;
 using System.Runtime.InteropServices;
 namespace RKitchen.Audio.PA.Platform
 {
-    internal static class Simple
+    internal static unsafe class Simple
     {
         [DllImport("pulseaudio")]
         internal extern static IntPtr pa_simple_new(
             [MarshalAs(UnmanagedType.BStr)] string server,
             [MarshalAs(UnmanagedType.BStr)] string name,
+            StreamDirection dir,
             [MarshalAs(UnmanagedType.BStr)] string dev
         );
 
@@ -17,9 +18,9 @@ namespace RKitchen.Audio.PA.Platform
         [DllImport("puseaudio")]
         internal extern static int pa_simple_write(
             IntPtr s,
-            [MarshalAs(UnmanagedType.LPArray)] byte[] data,
+            byte* data,
             uint bytes,
-            IntPtr error
+            int* error
         );
     }
 }
