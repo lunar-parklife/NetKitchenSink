@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Audio", "Audio\Audio.csproj", "{46C825E6-D48F-4D6D-A2FE-4200EEEB741A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AudioPA", "AudioPA\AudioPA.csproj", "{27AAF4BE-7338-42FD-8000-D28CBA9CF9FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,17 @@ Global
 		{46C825E6-D48F-4D6D-A2FE-4200EEEB741A}.Release|x64.Build.0 = Release|Any CPU
 		{46C825E6-D48F-4D6D-A2FE-4200EEEB741A}.Release|x86.ActiveCfg = Release|Any CPU
 		{46C825E6-D48F-4D6D-A2FE-4200EEEB741A}.Release|x86.Build.0 = Release|Any CPU
+		{27AAF4BE-7338-42FD-8000-D28CBA9CF9FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27AAF4BE-7338-42FD-8000-D28CBA9CF9FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27AAF4BE-7338-42FD-8000-D28CBA9CF9FF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{27AAF4BE-7338-42FD-8000-D28CBA9CF9FF}.Debug|x64.Build.0 = Debug|Any CPU
+		{27AAF4BE-7338-42FD-8000-D28CBA9CF9FF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{27AAF4BE-7338-42FD-8000-D28CBA9CF9FF}.Debug|x86.Build.0 = Debug|Any CPU
+		{27AAF4BE-7338-42FD-8000-D28CBA9CF9FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27AAF4BE-7338-42FD-8000-D28CBA9CF9FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27AAF4BE-7338-42FD-8000-D28CBA9CF9FF}.Release|x64.ActiveCfg = Release|Any CPU
+		{27AAF4BE-7338-42FD-8000-D28CBA9CF9FF}.Release|x64.Build.0 = Release|Any CPU
+		{27AAF4BE-7338-42FD-8000-D28CBA9CF9FF}.Release|x86.ActiveCfg = Release|Any CPU
+		{27AAF4BE-7338-42FD-8000-D28CBA9CF9FF}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
