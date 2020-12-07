@@ -1,9 +1,11 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 namespace RKitchen.Audio.PA
 {
     public sealed class PaContext : IAudioContext
     {
+        private bool simple;
         private IntPtr contextData;
         private IList<IAudioDevice> devices;
 
@@ -31,7 +33,9 @@ namespace RKitchen.Audio.PA
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            Debug.WriteLine($"Disposing of {Name}...");
+            foreach(IAudioDevice c in devices) c.Dispose();
+            if (simple) Platform.Simple.pa_sample_free(contextData);
         }
     }
 }
